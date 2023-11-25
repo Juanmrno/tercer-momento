@@ -72,16 +72,35 @@
         </header>
         <div>
             <section id="sectionRegistrarGastos">
-                <form action="">
-                    <input id="categoria" type="text">
-                    <input id="descripcion" type="text">
-                    <input id="valor" type="text">
-                    <input id="btnGuardar" type="button" value="Guardar">
-                </form>
+               <form action="">
+                  <label for="gcategoria" class="">Categoria</label>
+                  <select id="gcategoria" class="categoria" required>
+                     <option id="Negocios" value="business">Negocios</option>
+                     <option id="Diversion" value="fun">Diversion</option>
+                     <option id="Trasnporte" value="trasnportation">
+                        Trasnporte
+                     </option>
+                     <option id="comida" value="meal">comida</option>
+                  </select>
+                  <label for="gdescripcion"></label>
+                  <input
+                     placeholder="Descripcion"
+                     id="gdescripcion"
+                     type="text" />
+                  <label for="gvalor"></label>
+                  <input id="gvalor" placeholder="Valor" type="number" />
+                  <label for="gfecha"></label>
+                  <input placeholder="Fecha" id="gfecha" type="date" />
+                  <input type="button" value="Guardar" id="btnGuardar" />
+               </form>
             </section>
-            <section id="sectionListarGastos">Listar Gastos</section>
+            <section class="sectionBuscar" id="sectionBuscar">
+               Buscar
+               <label for="gcategoriaBuscar">Selecciona una categoría:</label>
+            </section>
+            <section id="sectionListar">Listar Gastos</section>
             <section id="sectionMovimientosGastos">Movimientos Gastos</section>
-        </div>
+         </div>
 
         <section></section>
     </main>
