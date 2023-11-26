@@ -1,14 +1,11 @@
-import { gastos } from "../model/ModelGastos.js";
-console.log(gastos);
-
 const topeMaximoGastos = 300000;
 let valorTotalGastos = 0;
+let gastos =[];
 
 let registrarGastos = document.getElementById("registrarGastos");
 registrarGastos.addEventListener("click", function () {
    document.getElementById("sectionRegistrarGastos").style.zIndex = "3";
    document.getElementById("sectionListar").style.zIndex = "2";
-   document.getElementById("sectionMovimientosGastos").style.zIndex = "2";
 });
 
 let btnGuardar = document.getElementById("btnGuardar");
@@ -71,7 +68,6 @@ let listarGastos = document.getElementById("listarGastos");
 listarGastos.addEventListener("click", function () {
    document.getElementById("sectionRegistrarGastos").style.zIndex = "2";
    document.getElementById("sectionListar").style.zIndex = "3";
-   document.getElementById("sectionMovimientosGastos").style.zIndex = "2";
 
    // Limpiar la sección de listado antes de volver a cargar los gastos
    document.getElementById("sectionListar").innerHTML = "";
@@ -82,12 +78,7 @@ listarGastos.addEventListener("click", function () {
    });
 });
 
-let movimientosGastos = document.getElementById("movimientosGastos");
-movimientosGastos.addEventListener("click", function () {
-   document.getElementById("sectionRegistrarGastos").style.zIndex = "2";
-   document.getElementById("sectionListar").style.zIndex = "2";
-   document.getElementById("sectionMovimientosGastos").style.zIndex = "3";
-});
+
 
 function movimientos() {
    console.log("Guardando movimiento");
