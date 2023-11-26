@@ -4,7 +4,7 @@ export let gastos = [
        categoria: "comidas",
        descripcion: "deliciosa comida chatarra",
        valor: 15000,
-       fecha: 11 / 2 / 2023,
+       fecha: 11/20/2023,
     },
     {
        id: 2,
