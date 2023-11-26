@@ -223,7 +223,7 @@ header {
     width: 100%;
     height: 100vh;
     position: absolute ;
-    background-color:rgb(42, 42, 116);
+    background-color:rgb(25, 119, 197);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,6 +286,12 @@ header {
     color: #fff; /* Cambia "blue" al color que desees */
   }
  
+  .card{
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px 40px; 
+  }
   
 
 
