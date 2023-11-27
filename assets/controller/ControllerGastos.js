@@ -2,6 +2,7 @@ const topeMaximoGastos = 300000;
 let valorTotalGastos = 0;
 let gastos =[];
 
+
 let registrarGastos = document.getElementById("registrarGastos");
 registrarGastos.addEventListener("click", function () {
    document.getElementById("sectionRegistrarGastos").style.zIndex = "3";
