@@ -295,3 +295,7 @@ header {
   
 
 
+  .mensaje-error {
+    color: red;
+    font-weight: bold;
+}
