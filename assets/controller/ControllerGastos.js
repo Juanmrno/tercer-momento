@@ -1,7 +1,6 @@
 const topeMaximoGastos = 300000;
 let valorTotalGastos = 0;
-let gastos =[];
-
+let gastos = [];
 
 let registrarGastos = document.getElementById("registrarGastos");
 registrarGastos.addEventListener("click", function () {
@@ -18,7 +17,7 @@ btnGuardar.addEventListener("click", () => {
 
    if (gvalor > topeMaximoGastos) {
       alert("El gasto supera el tope máximo permitido.");
-      return; 
+      return;
    }
 
    let gasto = {
@@ -38,9 +37,20 @@ btnGuardar.addEventListener("click", () => {
    document.getElementById("gvalor").value = "";
    document.getElementById("gfecha").value = "";
 
-   // función para listar el nuevo gasto
+   // Función para listar el nuevo gasto
    listarGasto(gasto);
- 
+
+   // Verificar el porcentaje de gastos y mostrar alertas según sea necesario
+   const porcentajeGastos = (valorTotalGastos / topeMaximoGastos) * 100;
+
+   if (porcentajeGastos >= 75) {
+      alert(`¡Alerta! Has alcanzado el 75% del tope máximo. Faltan $${topeMaximoGastos - valorTotalGastos} para llegar al límite.`);
+   } else if (porcentajeGastos >= 50) {
+      alert(`¡Alerta! Has alcanzado el 50% del tope máximo. Faltan $${topeMaximoGastos - valorTotalGastos} para llegar al límite.`);
+   } else if (porcentajeGastos >= 25) {
+      alert(`¡Alerta! Has alcanzado el 25% del tope máximo. Faltan $${topeMaximoGastos - valorTotalGastos} para llegar al límite.`);
+   }
+
    movimientos();
 });
 
@@ -79,18 +89,10 @@ listarGastos.addEventListener("click", function () {
    });
 });
 
-
-
 function movimientos() {
    console.log("Guardando movimiento");
    console.log("Valor total de los gastos:", valorTotalGastos);
-
-   // Calcular el porcentaje de gastos en relación al tope máximo
-   const porcentaje = (valorTotalGastos / topeMaximoGastos) * 100;
-
-   // Mostrar alerta si el porcentaje supera el 90%
-   if (porcentaje >= 90) {
-      const faltante = topeMaximoGastos - valorTotalGastos;
-      alert(`¡Alerta! Estás a un 90% del tope máximo. Faltan $${faltante} para alcanzarlo.`);
-   }
 }
+
+
+
