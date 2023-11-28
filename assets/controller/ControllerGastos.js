@@ -40,7 +40,7 @@ btnGuardar.addEventListener("click", () => {
 
    // función para listar el nuevo gasto
    listarGasto(gasto);
-
+ 
    movimientos();
 });
 
@@ -84,4 +84,13 @@ listarGastos.addEventListener("click", function () {
 function movimientos() {
    console.log("Guardando movimiento");
    console.log("Valor total de los gastos:", valorTotalGastos);
+
+   // Calcular el porcentaje de gastos en relación al tope máximo
+   const porcentaje = (valorTotalGastos / topeMaximoGastos) * 100;
+
+   // Mostrar alerta si el porcentaje supera el 90%
+   if (porcentaje >= 90) {
+      const faltante = topeMaximoGastos - valorTotalGastos;
+      alert(`¡Alerta! Estás a un 90% del tope máximo. Faltan $${faltante} para alcanzarlo.`);
+   }
 }

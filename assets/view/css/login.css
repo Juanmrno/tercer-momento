@@ -299,3 +299,16 @@ header {
     color: red;
     font-weight: bold;
 }
+/* Estilos para la clase mensaje-error */
+.mensaje-error {
+    background-color: #ffcccc; /* Fondo rojo claro */
+    color: #ff0000; /* Texto rojo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ff0000; /* Borde rojo */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 10px; /* Margen superior */
+    max-width: 300px; /* Ancho máximo */
+    text-align: center; /* Alineación del texto al centro */
+ }
+ 
+ 
